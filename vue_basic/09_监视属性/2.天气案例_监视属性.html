@@ -41,9 +41,11 @@
 				}
 			},
 			/* watch:{
+				// @监视的属性就是isHot
 				isHot:{
 					immediate:true, //初始化时让handler调用一下
 					//handler什么时候调用？当isHot发生改变时。
+					// @监视的内容是isHot；当isHot的值改变的时候，就会触发handler函数
 					handler(newValue,oldValue){
 						console.log('isHot被修改了',newValue,oldValue)
 					}
