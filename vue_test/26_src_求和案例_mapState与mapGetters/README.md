@@ -1,0 +1,11 @@
+mapState && mapGetters
+- mapState
+    - 简便写法；借助mapState生成计算属性，从state中读取数据
+    - 常用数组写法
+        - ...mapState(['sum','school','subject']),
+        - 函数名和属性名必须一致
+- mapGetters
+    - 简便写法；借助mapGetters生成计算属性，从getters中读取数据
+    - 常用数组写法
+        - ...mapGetters(['bigSum'])
+        - 同样也是函数名和属性名必须一致
