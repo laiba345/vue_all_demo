@@ -1,0 +1,27 @@
+# vuex的基本使用
+- 在main.js中引入store并注册store
+- 在store文件夹中；
+    - 引入Vue
+    - 引入Vuex
+- 相关属性
+    - state
+        - 用于存储数据
+    - actions
+        - 用于响应组件中的动作
+        - 在其中也可以书写某些逻辑，比如state中的某个元素值是偶数再进行commit操作；或者设置一个定时器，等定时器时间过了再进行commit
+        - 其中方法有两个参数
+            - context ～ 上下文
+            - value ～ 用户进行dispatch传过来的参数
+    - mutations 
+        - 用于直接操作数据(state)
+        - 两个参数
+            - state
+            - value
+    - dispatch
+        - 某个组件想调用actions方法，
+        - 可以在别的组件中使用 this.$store 来获取vuex中的store对象
+            - this.$store.dispatch('jiaOdd', this.n)
+            - this.$store.commit('JIA', this.n)
+        - 可以是在某个组件中，通过点击事件来在该组件中，进行相关vuex操作
+
+    - 每次创建完一个store都需要将这三部分暴露出去
