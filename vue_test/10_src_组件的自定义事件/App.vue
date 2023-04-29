@@ -6,10 +6,10 @@
 		<School :getSchoolName="getSchoolName"/>
 
 		<!-- 通过父组件给子组件绑定一个自定义事件实现：子给父传递数据（第一种写法，使用@或v-on） -->
-		<!-- <Student @atguigu="getStudentName" @demo="m1"/> -->
+		<Student @atguigu="getStudentName" @demo="m1"/>
 
 		<!-- 通过父组件给子组件绑定一个自定义事件实现：子给父传递数据（第二种写法，使用ref） -->
-		<Student ref="student" @click.native="show"/>
+		<!-- <Student ref="student" @click.native="show"/> -->
 	</div>
 </template>
 
@@ -30,7 +30,8 @@
 			getSchoolName(name){
 				console.log('App收到了学校名：',name)
 			},
-			getStudentName(name,...params){
+			// 子给父传递数据可以传递多个数据；
+			getStudentName(name, ...params){
 				console.log('App收到了学生名：',name,params)
 				this.studentName = name
 			},
