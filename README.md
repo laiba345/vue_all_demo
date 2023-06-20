@@ -7,7 +7,7 @@ npm install @vue/cli -g
 ```
 npm update @vue/cli -g
 ```
-4. 使用Vue的命令来创建项目
+3. 使用Vue的命令来创建项目
 ```
 Vue create 项目名称
 ```
